@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "check_input.h"
+
 int creat_matrix1(int rows1, int cols1, int** matrix1);
 int creat_matrix2(int rows2, int cols2, int** matrix2);
 int product_matrix(int rows1, int cols2, int rows2, int cols1, int** matrix1, int** matrix2, int** result);
@@ -10,13 +12,14 @@ int main(void)
 {
     int rows1 = 0; // количество строк 
     int cols1 = 0; // количество столбцов
-    printf("Enter how many rows1 and columns will be in your matrix1\n");
-    scanf("%d %d", &rows1, &cols1);
+
+
 
     int rows2 = 0;
     int cols2 = 0;
-    printf("Enter how many rows1 and columns will be in your matrix2\n");
-    scanf("%d %d", &rows2, &cols2);
+
+    check_input1(&rows1, &cols1);
+    check_input2(&rows2, &cols2);
 
     if (cols1 != rows2)
     {
