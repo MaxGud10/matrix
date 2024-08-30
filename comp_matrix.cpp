@@ -106,7 +106,7 @@ int product_matrix(int** result, int** matrix1, int** matrix2, int rows1, int co
 {
     printf("Your matrix: \n");
 
-    for (int i = 0; i < rows1; i++) // row
+    for (int i = 0; i < cols1; i++) // row
     {
         for (int j = 0; j < cols2; j++) // cols
         {
